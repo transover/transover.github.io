@@ -6,37 +6,41 @@
 
     <style>
         html, body {
-            width: 500px;
-            height:300px;
+            width: 100px;
+            height:100px;
             left:50px;
             top:30px;
-            margin: 100px 289px;  /*设置页边距*/
-            background:#000; /*设置背景颜色 #f6d8e2;*/
+            margin: 100px 300px; 
+            background:#000;
         }
-        pp1{
+        div{
             position: absolute;
-            top: 20px;
-            left: 20px;
+            width: 800px;
+            height:800px;
+            top: 655px;
+            left: 550px;
         }
-        canvas {
+        canvas {    
             position: absolute;
             width: 1000px;
-            height: 500px;
-            left:135px;
-            top:50px;
+            height:1000px;
+            left:260px;
+            top:500px;
+            transform:scale(3);
+            /*background:#ff8400; 
         }
     </style>
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <script type="text/javascript" src="this.js"></script>
 
     <script language="javascript" type="text/javascript">
-        setTimeout("javascript:location.href='./index.html'", 60000);//60s后跳转页面
+        setTimeout("javascript:location.href='./index.html'", 150000);
     </script>
 
 </head>
 
-<div id="myContent" style="color:red; font-family:楷体;font-size:20px;"></div>
-<div id="contentToWrite" class="comments" style="display:none;"> <br>   命运的烟云<br>   稍纵即逝<br>——by hang</div>
+<div id="myContent" style="color:red; font-size:80px;"></div>
+<div id="contentToWrite" class="comments" style="display:none;"> <br>   命运的烟云<br>   稍纵即逝<br>——by hang </div>
 <script type="text/javascript"> writeContent(true); </script>
 
 <body>
@@ -49,8 +53,8 @@
                 duration:  2, // particle duration in sec
                 velocity: 100, // particle velocity in pixels/sec
                 effect: -0.75, // play with this for a nice effect
-                size:      30, // particle size in pixels
-            },
+                size:      30 // particle size in pixels
+            }
         };
 
         /* RequestAnimationFrame polyfill by Erik Miller */
@@ -134,11 +138,11 @@
                 this.velocity.y += this.acceleration.y * deltaTime;
                 this.age += deltaTime;
             };
-            Particle.prototype.draw = function(context, image)  //图像绘制
+            Particle.prototype.draw = function(context, image)  
             {
                 function ease(t)
                 {
-                    return (--t) * t * t + 1; //1+t^3-t^2   先变小再变大的过程
+                    return (--t) * t * t + 1; //1+t^3-t^2   
                 }
                 var size = image.width * ease(this.age / settings.particles.duration);
                 context.globalAlpha = 1 - this.age / settings.particles.duration;
@@ -264,7 +268,7 @@
                 }
                 context.closePath();
                 // create the fill
-                context.fillStyle = '#fa759f';
+                context.fillStyle ='#fa759f';
                 context.fill();
                 // create the image
                 var image = new Image();
@@ -321,7 +325,7 @@
                     if (value==2)
                         value++;
                         particleRate = 0;
-                }, 8000 );//4秒
+                }, 8000 );
 
             setTimeout(function()
                 {
@@ -332,7 +336,7 @@
                         ParticlePool.firstActive = 0;
                         ParticlePool.firstFree = 0;
 
-                }, 4600 );//5秒
+                }, 4600 );
 
             setTimeout(function()
                 {
@@ -343,14 +347,14 @@
                         ParticlePool.firstActive = 0;
                         ParticlePool.firstFree = 0;
 
-                }, 9600 );//5秒
+                }, 9600 );
 
             // delay rendering bootstrap
             setTimeout(function()
                 {
                     onResize();
                     render();
-                }, 50 );//50毫秒刷新执行
+                }, 50 );
         })(document.getElementById('board'));
     </script>
 

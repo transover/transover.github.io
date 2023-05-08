@@ -1,0 +1,44 @@
+.logo_image {
+    width: 100px;
+    height: 100px;
+  }
+.custom-menu {
+  background-color: rgba(255, 255, 255, 0); /* 背景完全透明 */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.custom-menu ul {
+  background-color: rgba(255, 255, 255, 0); /* 背景完全透明 */
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.custom-menu li {
+  background-color: rgba(255, 255, 255, 0); /* 背景完全透明 */
+  display: inline-block;
+  margin-right: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.custom-menu a {
+  color: white;
+  font-size: 30px;
+  font-family: "楷体", sans-serif;
+  background-color: rgba(255, 192, 203, 0.1); /* 鼠标悬停时，粉红色背景完全不透明 */
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.custom-menu a:hover {
+  font-size: 30px;
+  font-family: "楷体", sans-serif;
+  background-color: rgba(255, 192, 203, 1); /* 鼠标悬停时，粉红色背景完全不透明 */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}

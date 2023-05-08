@@ -2410,7 +2410,7 @@ $packages["main"] = (function() {
 		sheet = $global.document.createElement($externalize("style", $String));
 		sheet.innerHTML = $externalize("html, body { \n\t\t\tpadding:0; margin:0; border:0; width:100%; height:100%; overflow:hidden;\n\t\t}\n\t\thtml{\n\t\t\tbackground: black;\n\t\t}", $String);
 		$global.document.head.appendChild(sheet);
-		$global.document.title = $externalize("whoa", $String);
+		$global.document.title = $externalize("HANG", $String);
 		$global.addEventListener($externalize("load", $String), $externalize((function $b() {
 			var _r, _r$1, _tuple, _tuple$1, cover, err, rain1, rain2, $s, $r;
 			/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; _r = $f._r; _r$1 = $f._r$1; _tuple = $f._tuple; _tuple$1 = $f._tuple$1; cover = $f.cover; err = $f.err; rain1 = $f.rain1; rain2 = $f.rain2; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+   <head>
+      <meta charset="UTF-8">
+      <title>Game 1.0</title>
+      <style>
+        #water_height {
+          width: 800px; /* 设置滑块的宽度 */
+            height:30px;
+            padding:10px;
+        }
+      </style>
+   </head>
+      <script type="text/javascript" src="Box2d.min.js"></script>
+      <script type="text/javascript" src="game_source.js"></script>
+   <body onload="TestRagdoll();">  <!--onload 文档加载完成后自动调用init()函数-->
+      <canvas id="canvas" width="960" height="960"  style="background-color:#333333;" ></canvas> <!--创建画布-->
+      <br><br><label id="value" for="water_height" style = "font-size: 35px">←→控制水位(%)：15%</label>
+   <br><br>
+      <input type="range" id="water_height" name="water_height" min="0" max="100" value="30">
+   </body>
+   <script>
+     var slider = document.getElementById("water_height");
+     var valueDisplay = document.getElementById("value");
+
+     // 拖动事件监听器
+     slider.addEventListener("input", function() {
+        valueDisplay.textContent ="←→控制水位(%)："+slider.value+'%';
+     });
+
+     // 开始拖动时调用的函数
+     slider.addEventListener("mousedown", function() {
+       slider.addEventListener("mousemove", updateValue);
+     });
+
+     // 结束拖动时调用的函数
+     slider.addEventListener("mouseup", function() {
+       slider.removeEventListener("mousemove", updateValue);
+     });
+
+     // 更新滑块数值的函数
+     function updateValue() {
+        valueDisplay.textContent = "←→控制水位(%)："+slider.value+'%';
+     }
+   </script>
+
+
+</html>

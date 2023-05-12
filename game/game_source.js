@@ -303,7 +303,7 @@ function TestRagdoll() {
    function getBodyCB(fixture) {
       if (fixture.GetBody().GetType() !== b2Body.b2_staticBody) //选中的fixture
       {
-         if (fixture.GetShape().TestPoint(fixture.GetBody().GetTransform(), mousePVec))
+         if (fixture.GetShape().TestPoint(fixture.GetBody().GetTransform(), mousePVec)){
             selectedBody = fixture.GetBody();  //更新
             return false;
          }
@@ -353,8 +353,7 @@ function TestRagdoll() {
       }
    }
 
-   function getElementPosition(element)
-   {
+   function getElementPosition(element) {
       var elem = element, tagname = "", x = 0, y = 0;
 
       while ((typeof (elem) == "object") && (typeof (elem.tagName) != "undefined")) {
@@ -372,5 +371,4 @@ function TestRagdoll() {
       }
       return {x: x, y: y};
    }
-
 }
